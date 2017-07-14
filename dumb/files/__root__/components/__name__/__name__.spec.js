@@ -2,7 +2,6 @@ import React from 'react'
 import {
   shallow,
 } from 'enzyme'
-import proptype_error_catcher from 'react-proptype-error-catcher'
 
 import <%= pascalEntityName %> from './<%= pascalEntityName %>'
 
@@ -17,7 +16,7 @@ describe('<<%= pascalEntityName %> />', () => {
   beforeEach(() => {
     sandbox = sinon.sandbox.create()
 
-    proptype_error_catcher(sandbox)
+    require('react-proptype-error-catcher')(sandbox)
 
     props = {}
   })
