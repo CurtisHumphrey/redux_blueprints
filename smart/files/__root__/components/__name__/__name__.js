@@ -18,7 +18,7 @@ export class <%= pascalEntityName %> extends React.Component {
 
   render () {
     return (
-      <div></div>
+      <div>loading...</div>
     )
   }
 }

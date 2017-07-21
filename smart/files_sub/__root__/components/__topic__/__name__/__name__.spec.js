@@ -2,20 +2,19 @@ import React from 'react'
 import {
   shallow,
 } from 'enzyme'
-import proptype_error_catcher from 'react-proptype-error-catcher'
-import Helmet from 'react-helmet'
+import _ from 'lodash'
 
 import {
-  <%= pascalEntityName %>View,
+  <%= pascalEntityName %>,
   actions,
   selectors,
-} from './<%= pascalEntityName %>View'
+} from './<%= pascalEntityName %>'
 
 import _ from 'lodash'
-// import stylesClass from './<%= pascalEntityName %>View.scss'
+// import stylesClass from './<%= pascalEntityName %>.scss'
 // const styles = _.mapValues(stylesClass, (raw) => '.' + raw)
 
-describe('<%= pascalEntityName %>', () => {
+describe('<<%= pascalEntityName %> />', () => {
   let sandbox
   let props
   let prop_actions
@@ -43,7 +42,7 @@ describe('<%= pascalEntityName %>', () => {
 
   describe('general', () => {
     it('with normal props it should render without errors', () => {
-      const wrapper = shallow(<<%= pascalEntityName %>View {...props} />)
+      const wrapper = shallow(<<%= pascalEntityName %> {...props} />)
       expect(wrapper).to.exist
     })
     it('redux actions for connect should have these keys', () => {
@@ -56,10 +55,7 @@ describe('<%= pascalEntityName %>', () => {
         expect(selectors).to.contain.all.keys(prop_selectors)
       }
     })
-    it('should have a useful meta description', () => {
-      const wrapper = shallow(<<%= pascalEntityName %>View {...props} />)
-      const meta_description = _.find(wrapper.find(Helmet).prop('meta'), ['name', 'description'])
-      expect(meta_description.content).to.not.eql('content')
-    })
+  })
+  describe('behaviors', () => {
   })
 })

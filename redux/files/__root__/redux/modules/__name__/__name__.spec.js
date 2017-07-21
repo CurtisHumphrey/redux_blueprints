@@ -29,4 +29,8 @@ describe('<%= snakeEntityName %> redux', () => {
     state = reducer(undefined, {})
     expect(state).to.exist
   })
+  describe('private_actions', () => {
+  })
+  describe('public actions', () => {
+  })
 })
