@@ -10,7 +10,6 @@ import {
   selectors,
 } from './<%= pascalEntityName %>'
 
-import _ from 'lodash'
 // import stylesClass from './<%= pascalEntityName %>.scss'
 // const styles = _.mapValues(stylesClass, (raw) => '.' + raw)
 
