@@ -2,7 +2,6 @@ import React from 'react'
 import {
   shallow,
 } from 'enzyme'
-import proptype_error_catcher from 'react-proptype-error-catcher'
 import Helmet from 'react-helmet'
 
 import {
@@ -15,7 +14,7 @@ import _ from 'lodash'
 // import stylesClass from './<%= pascalEntityName %>View.scss'
 // const styles = _.mapValues(stylesClass, (raw) => '.' + raw)
 
-describe('<%= pascalEntityName %>', () => {
+describe('<%= pascalEntityName %>View', () => {
   let sandbox
   let props
   let prop_actions
