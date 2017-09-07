@@ -13,7 +13,7 @@ import {
 // import stylesClass from './<%= pascalEntityName %>.scss'
 // const styles = _.mapValues(stylesClass, (raw) => '.' + raw)
 
-describe('<<%= pascalEntityName %> />', () => {
+export const <%= pascalEntityName %>_specs = describe('<<%= pascalEntityName %> />', () => {
   let sandbox
   let props
   let prop_actions

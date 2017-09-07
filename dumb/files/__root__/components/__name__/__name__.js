@@ -11,7 +11,7 @@ export class <%= pascalEntityName %> extends React.PureComponent {
 
   render () {
     return (
-      <div></div>
+      <div>Content</div>
     )
   }
 }
