@@ -1,7 +1,7 @@
 import React from 'react'
 // import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import Helmet from 'react-helmet'
+import SEO from 'components/marketing/SEO'
 import { createStructuredSelector } from 'reselect'
 
 import './<%= pascalEntityName %>View.scss'
@@ -18,12 +18,9 @@ export class <%= pascalEntityName %>View extends React.PureComponent {
   render () {
     return (
       <div styleName='root'>
-        <Helmet
+        <SEO
           title={'<%= pascalEntityName %>'}
-          meta={[{
-            name: 'description',
-            content: 'content',
-          }]}
+          canonical={''}
         />
       </div>
     )
