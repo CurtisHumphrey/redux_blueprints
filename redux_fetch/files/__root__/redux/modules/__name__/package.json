@@ -1,3 +1,0 @@
-{
-  "main":"./<%= snakeEntityName %>.js"
-}

@@ -7,10 +7,6 @@ module.exports = {
     return 'generates a dumb (pure) component, --topic=`subfolder`'
   },
 
-  beforeInstall: function (options) {
-    has_topic = options.entity.options.topic != null
-  },
-
   fileMapTokens: function () {
     // Return custom tokens to be replaced in your files
     return {
@@ -19,12 +15,5 @@ module.exports = {
         return options.entity.options.topic || 'unknown'
       },
     }
-  },
-
-  filesPath: function () {
-    if (has_topic) {
-      return path.join(this.path, 'files_sub')
-    }
-    return path.join(this.path, 'files')
   },
 }
