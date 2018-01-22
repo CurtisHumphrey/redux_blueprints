@@ -35,22 +35,21 @@ describe('<%= snakeEntityName %> redux', () => {
   })
   describe('private_actions', () => {
     it('should have a set', () => {
-      // state = reducer(undefined, private_actions.set())
-      // expect(selectors.something(state)).to.eql()
+      state = reducer(undefined, private_actions.set())
+      expect(selectors.something(state)).to.eql()
     })
   })
   describe('public actions', () => {
-    it('should have a get_info', (done) => {
+    it('should have a get_info', () => {
       const expected_url = '/api/v1'
       const xhr = xhr_responses.info
       dq_fetch_mock.mock(expected_url, xhr)
 
-      actions.get_info()(dispatch, getState)
-      .then(() => {
-        expect(dq_fetch_mock.url_on_call(0)).to.be.eql(expected_url)
-        expect(dispatch, 'set').calledWith(private_actions.set(xhr))
-      })
-      .then(done, done)
+      return actions.get_info()(dispatch, getState)
+        .then(() => {
+          expect(dq_fetch_mock.url_on_call(0)).to.be.eql(expected_url)
+          expect(dispatch, 'set').calledWith(private_actions.set(xhr))
+        })
     })
   })
 })

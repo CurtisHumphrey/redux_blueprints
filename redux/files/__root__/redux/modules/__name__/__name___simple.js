@@ -44,4 +44,3 @@ export const {reducer, private_actions, actions, ACTION_TYPES} = make_reducer_n_
   Immutable,
 })
 export default reducer
-
