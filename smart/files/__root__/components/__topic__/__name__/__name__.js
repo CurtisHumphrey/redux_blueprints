@@ -10,7 +10,7 @@ export const actions = {}
 
 const mapStateToProps = createStructuredSelector(selectors)
 
-export class <%= pascalEntityName %> extends React.Component {
+export class <%= pascalEntityName %> extends React.PureComponent {
   static propTypes = {
   };
   static defaultProps = {
