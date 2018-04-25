@@ -2,14 +2,13 @@ import reducer, {
   actions,
   private_actions,
   selectors as <%= snakeEntityName %>_selectors,
-  BASE_SELECTOR_PATH,
 } from './<%= snakeEntityName %>'
-import full_state_selectors from 'redux/test_helpers/full_state_selectors'
+
 import dq_fetch_mock from 'redux/utils/dq_fetch/dq_fetch_mock'
 
 import * as xhr_responses from './<%= snakeEntityName %>_xhr_responses'
 
-const selectors = full_state_selectors(<%= snakeEntityName %>_selectors, BASE_SELECTOR_PATH)
+const selectors = <%= snakeEntityName %>_selectors
 
 describe('<%= snakeEntityName %> redux', () => {
   let sandbox
@@ -22,7 +21,7 @@ describe('<%= snakeEntityName %> redux', () => {
     dq_fetch_mock.setup(sandbox)
     dispatch = sandbox.stub()
     state = reducer(undefined, {})
-    getState = () => ({[BASE_SELECTOR_PATH]: state})
+    getState = () => state
   })
   afterEach(() => {
     sandbox.restore()

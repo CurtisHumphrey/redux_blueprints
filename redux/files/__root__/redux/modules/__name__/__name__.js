@@ -1,4 +1,4 @@
-import reducer, {
+import <%= snakeEntityName %>, {
   actions as simple_actions,
   private_actions,
   selectors,
@@ -9,7 +9,9 @@ import * as thunk_actions from './<%= snakeEntityName %>_thunks'
 
 export const actions = Object.assign({}, simple_actions, thunk_actions)
 
-export default reducer
+import {inject_reducers} from 'store/inject_reducers'
+export default inject_reducers({<%= snakeEntityName %>})
+
 export {
   selectors,
   BASE_SELECTOR_PATH,
